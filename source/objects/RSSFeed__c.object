@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <fields>
+        <fullName>Chatter_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Chatter Group</label>
+        <length>100</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Chatter_Tag__c</fullName>
+        <defaultValue>&quot;#RSS&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Chatter Tag</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Run_DateTime__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Run DateTime</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>RSS_Feed_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>RSS Feed URL</label>
+        <required>false</required>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Sync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>When set to true, RSS Feeds are Synced</description>
+        <externalId>false</externalId>
+        <label>Sync</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>RSS Feed</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RSS-{0000}</displayFormat>
+        <label>RSSFeed Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>RSS Feeds</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>Refresh_RSS_Feeds</fullName>
+        <availability>online</availability>
+        <description>Refreshes Configured RSS Feeds</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Refresh RSS Feeds</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!requireScript(&quot;/soap/ajax/15.0/connection.js&quot;)} 
+{!requireScript(&quot;/soap/ajax/15.0/apex.js&quot;)} 
+
+sforce.apex.execute(&quot;ChatterPheed&quot;,&quot;refreshRSSFeed&quot;, {});</url>
+    </webLinks>
+</CustomObject>

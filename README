@@ -1,0 +1,14 @@
+RSS to Chatter Groups
+
+URL: http://www.cloudspokes.com/challenge_detail.html?contestID=264
+Blog: http://blog.cloudspokes.com/2011/08/rss-to-chatter-groups-winners-5-great.html
+Winner: http://www.cloudspokes.com/profile.html?username=techtrekker
+Challenge end date: 08/16/11 11:00 PM
+
+Description
+===========
+Create an automated way to pull RSS feeds into Chatter groups. Companies have a need to keep their employees informed about topics relating to their business. What better way then to send RSS feeds into Chatter! For instance, a company may want to add new articles from the Apple iOS RSS feed to their Mobile chatter group.
+
+Requirements
+============
+Create a service that runs on a daily basis using any platform that you would like. The app should interrogate each RSS feed, find any new articles that were published in the last 24 hours and send them to a specified Chatter group as a link. The application must support multiple RSS feed URLs but a single Chatter group for each RSS feed. The ChatterLink should use the URL of the article and title of the article for the name. The user may also specify optional hashtags for each article as well as optional text in the prepended to the title.
